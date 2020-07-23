@@ -10,21 +10,21 @@ Aplicação educacional, para gerenciamento de alunos e importação de cursos e
 
 * Instale as dependências do projeto:
 
-> composer install
+  > composer install
 
 * Gere uma chave para sua aplicação:
 
-> php artisan key:generate
+  > php artisan key:generate
 
 * Execute o comando pra criar as tabelas necessárias na database criada:
 
-> php artisan migrate
+  > php artisan migrate
 
 * Execute o comando pra inicializar o servidor:
 
-> php artisan serve
+  > php artisan serve
 
 * Abra sua aplicação no navegador com o endereço:
 
-> http://127.0.0.1:8000
+  > http://127.0.0.1:8000
 
