@@ -155,7 +155,7 @@ class AlunosController extends AppBaseController
     {
         $client = new GuzzleHttp\Client();
         $res = $client->request('GET', 'http://serviceweb.aix.com.br/aixapi/api/cep/' . $cep);
-      
+        
         return $res->getBody();
     }
 }

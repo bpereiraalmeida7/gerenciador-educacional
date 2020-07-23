@@ -27,14 +27,6 @@
         {!! Form::label('cep', 'Cep:') !!}
         {!! Form::text('cep', null, ['class' => 'form-control'],['id'=>'cep']) !!}
     </div>
-
-    @push('scripts')
-        <script type="text/javascript">
-            $('#cep').html(function() {
-                console.log('aq')
-            });
-        </script>
-    @endpush
 </div>    
 <div class="form-group row">
     <!-- Cidade Field -->
@@ -46,7 +38,7 @@
     <!-- Estado Field -->
     <div class="form-group col-sm-6">
         {!! Form::label('estado', 'Estado:') !!}
-        {!! Form::text('estado', null, ['class' => 'form-control']) !!}
+        {!! Form::text('estado', null, ['class' => 'form-control'],['id'=>'estado']) !!}
     </div>
 </div>
 <div class="form-group row">
@@ -85,8 +77,11 @@
 
     @push('scripts')
         <script type="text/javascript">
-            $('#cep').ready(function() {
-                console.log('aq')
+             $('#cep').blur(function () {
+                var cepDigitado = $(this).val();
+                $.get('/buscaCep/' + cepDigitado, function (result) {
+                    console.log(result)
+                });
             });
 
             
